@@ -16,7 +16,7 @@ Particle_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]
 
 # 定義物體類
 class Particle:
-    def __init__(self, x, y, mass):
+    def __init__(self, x, y, mass, vx=0, vy=0):
         self.x = x
         self.y = y
         self.mass = mass
@@ -58,6 +58,17 @@ def calculate_gravity(p1, p2):
 particle1 = Particle(200, 300, 1000)
 particle2 = Particle(600, 300, 500)
 particle3 = Particle(500, 100, 700)
+# 穩定三體特殊解
+# particle1 = Particle(300, 300, 1000)
+# particle2 = Particle(400, 300, 500)
+# particle3 = Particle(200, 300, 500)
+# particle1.vx = 0
+# particle1.vy = 0
+# particle2.vx = 0
+# particle2.vy = -1
+# particle3.vx = 0
+# particle3.vy = 1
+
 
 # 主迴圈
 running = True
